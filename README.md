@@ -3,8 +3,8 @@ Beadandó feladat EKKE Keretrendszer alapú programozás tantárgyhoz
 
 A projekt beállításoknál szükséges definiálni néhány környezeti változót:
 
-DB_USER=hhwztjtg;
-DB_PASSWORD=uHe2kH6EYXZR_aLWa6aq5YNMtHXU1KrP;
+DB_USER;
+DB_PASSWORD;
 
 EMAIL_USER=google email;
 EMAIL_PASSWORD=google api password;
