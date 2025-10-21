@@ -22,4 +22,5 @@ public class Todo {
     private LocalDateTime created = LocalDateTime.now();
     private User user;
     private TodoCategory todoCategory;
+    private TodoCardType cardType;
 }

@@ -1,5 +1,6 @@
 package com.le43er.frameworkProject.controller.dto;
 
+import com.le43er.frameworkProject.model.TodoCardType;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
@@ -29,4 +30,6 @@ public class TodoDto {
     private UserDto userDto;
 
     private TodoCategoryDto todoCategoryDto;
+
+    private TodoCardType cardType;
 }
