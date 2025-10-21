@@ -38,6 +38,7 @@ public class TodoServiceImpl implements TodoService {
             null :
             TodoCategoryServiceImpl.convertTodoCategory2TodoCategoryEntity(todo.getTodoCategory())
         )
+        .cardType(todo.getCardType())
         .build();
   }
 
@@ -50,7 +51,8 @@ public class TodoServiceImpl implements TodoService {
         UserServiceImpl.convertUserEntity2User(todoEntity.getUser()),
         todoEntity.getTodoCategoryEntity() == null ? null :
             TodoCategoryServiceImpl.convertTodoCategoryEntity2TodoCategory(
-                todoEntity.getTodoCategoryEntity())
+                todoEntity.getTodoCategoryEntity()),
+        todoEntity.getCardType()
     );
   }
 
@@ -110,6 +112,7 @@ public class TodoServiceImpl implements TodoService {
       todoToModify.setTodoCategory(todo.getTodoCategory());
       todoToModify.setDue_to(todo.getDue_to());
       todoToModify.setName(todo.getName());
+      todoToModify.setCardType(todo.getCardType());
       return convertTodoEntity2Todo(
           todoRepository.save(convertTodo2TodoEntity(todoToModify))
       );

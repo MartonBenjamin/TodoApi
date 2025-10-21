@@ -1,8 +1,11 @@
 package com.le43er.frameworkProject.dao.entity;
 
+import com.le43er.frameworkProject.model.TodoCardType;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -49,5 +52,9 @@ public class TodoEntity {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_category_name")
     private TodoCategoryEntity todoCategoryEntity;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "card_type")
+    private TodoCardType cardType;
 
 }
